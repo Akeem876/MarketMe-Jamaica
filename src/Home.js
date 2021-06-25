@@ -1,7 +1,14 @@
 import React from "react";
+import MainFirst from "./MainFirst";
+import MainSecond from "./MainSecond";
 
 const Home = () => {
-  return <main>hello</main>;
+  return (
+    <main>
+      <MainFirst />
+      <MainSecond />
+    </main>
+  );
 };
 
 export default Home;

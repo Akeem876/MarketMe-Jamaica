@@ -6,9 +6,11 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav">
-        <div className="logo">
-          <img style={{ height: "45px" }} src={logo} alt=" Market Me logo" />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img style={{ height: "50px" }} src={logo} alt=" Market Me logo" />
+          </div>
+        </Link>
         <div className="navigation">
           <ul>
             <Link to="/">

@@ -5,6 +5,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #f5f0d02a;
 }
 * {
   margin: 0;
@@ -13,14 +14,18 @@ body {
   list-style: none;
   font-family: "Montserrat", sans-serif;
 }
+/* navigation */
 nav {
-  background-color: #b0af8f;
-  height: 12vh;
+  background-image: linear-gradient(180deg, #33333393, transparent);
+  /* background-color: rgba(51, 51, 51, 0.288); */
+  height: 16vh;
+  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
 .nav {
-  width: 95%;
+  width: 85%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -40,4 +45,50 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+}
+/* main section home page */
+.main-first {
+  background-image: url(./MarketMe/images/new-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 615px;
+}
+/* .top-frame {
+  width: 85%;
+  height: 450px;
+  border: 2px solid #fff;
+   border-image-source: url(MarketMe/images/background-frame.jpg);
+  border-image-slice: 250;
+  border-image-width: 25px;
+  margin: auto;
+} */
+.top-frame {
+  padding: 130px;
+}
+.top-text h2,
+.bottom-text h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  /* color: #6d6c31; */
+  color: #fff;
+}
+.top-text {
+  margin: 0px 60px 30px;
+}
+.bottom-text {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 60px 10px;
+}
+.separator {
+  background-color: #fff;
+  height: 3px;
+  width: 80%;
+  margin: auto;
+}
+.overlay {
+  background-color: rgba(70, 62, 50, 0.404);
+  height: 100%;
+  width: 100%;
 }
