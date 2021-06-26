@@ -16,6 +16,7 @@ const Nav = () => {
             <Link to="/">
               <li>Home</li>
             </Link>
+            <div className="underline"></div>
           </ul>
           <ul>
             <Link to="/our-services">
