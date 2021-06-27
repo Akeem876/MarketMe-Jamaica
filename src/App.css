@@ -16,7 +16,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 /* navigation */
-nav {
+.home-nav {
   background-image: linear-gradient(180deg, #2c2c2c93, transparent);
   /* background-color: rgba(51, 51, 51, 0.288); */
   height: 16vh;
@@ -24,6 +24,17 @@ nav {
   margin: auto;
   display: flex;
   justify-content: center;
+}
+.services-nav {
+  background-color: #b0af8f;
+  height: 11vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.services-nav .navigation ul li:hover {
+  color: #303142;
 }
 .nav {
   width: 85%;
@@ -299,7 +310,7 @@ nav {
 .gold2 {
   font-size: 1.3rem;
   text-transform: uppercase;
-  color: #9d9b32;
+  color: #303142;
   font-weight: 600;
 }
 .our-team-para {
@@ -429,4 +440,82 @@ footer {
 }
 .right-side .brands i {
   font-size: 1.2rem;
+}
+/* our services */
+.our-services-header {
+  height: 150px;
+  background-image: url(./MarketMe/images/hero-photo2.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-top: 180px;
+}
+.our-services-header h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: #d8d8d8;
+}
+.our-services-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #46452879;
+  display: flex;
+  align-items: center;
+}
+.our-services-underline {
+  height: 2px;
+  width: 230px;
+  background-color: #cecd8e;
+  z-index: 40;
+}
+.serv-head {
+  width: 40%;
+  margin-left: 50px;
+}
+.section-service {
+  margin-top: 130px;
+  padding: 20px 0;
+}
+.our-services-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  height: 260px;
+  width: 90%;
+  margin: auto;
+}
+.our-services-main img {
+  border-radius: 3px;
+}
+.img-cont {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.services-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+}
+.services-text .title-service {
+  font-size: 1.3rem;
+  color: #3d3d3d;
+  margin-bottom: 12px;
+}
+.services-text .service-para {
+  display: flex;
+  justify-content: center;
+}
+.services-text .service-para p {
+  color: #4f4c4c;
+  font-size: 0.8rem;
+  width: 60%;
+  line-height: 1.8;
+}
+.our-services-main:nth-child(even) {
+  background-color: #f4f4f4;
+  flex-direction: row-reverse;
 }
