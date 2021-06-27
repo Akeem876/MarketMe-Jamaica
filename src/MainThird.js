@@ -6,7 +6,7 @@ import { ourWork } from "./our-work";
 const MainThird = () => {
   return (
     <section className="main-third">
-      <article className="our-work">
+      <article className="our-work" id="work">
         <div className="our-work-header">
           <h2>our work</h2>
           <div className="our-work-underline"></div>
@@ -31,10 +31,10 @@ const MainThird = () => {
               </div>
             </div>
             <button>
-              <i className="fas fa-chevron-left"></i>
+              <i className="fas third-prev fa-chevron-left"></i>
             </button>
             <button>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas third-next fa-chevron-right"></i>
             </button>
           </article>
         </div>

@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f0d02a;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -44,9 +45,15 @@ nav {
   width: 35%;
   font-size: 0.8rem;
 }
+.navigation ul li {
+  transition: ease 0.4s all;
+}
 .navigation ul > * {
   text-decoration: none;
   color: #fff;
+}
+.navigation ul li:hover {
+  color: #b3b37d;
 }
 .logo {
   display: flex;
@@ -54,7 +61,7 @@ nav {
 }
 /* main section home page */
 .main-first {
-  background-image: url(./MarketMe/images/new-hero.jpg);
+  background-image: url(./MarketMe/images/our-service-background.jpg);
   background-position: center;
   background-size: cover;
   height: 615px;
@@ -106,14 +113,14 @@ nav {
 }
 
 .main-second {
-  background-color: #40464d;
+  background-color: #f1f0c6;
 }
 .market-me-about {
   display: flex;
 }
 .about-text {
   width: 50%;
-  color: #dfdfdf;
+  color: #303142;
   margin-top: 80px;
 }
 .header-about {
@@ -129,7 +136,7 @@ nav {
 .header-underline {
   width: 120px;
   height: 1px;
-  background-color: #dfdebe;
+  background-color: #462b44;
   margin: auto;
 }
 .about-text-para {
@@ -195,13 +202,13 @@ nav {
 .main-third {
   margin: 80px 0 60px;
 }
-button {
+.our-work-peices button {
   background: none;
   font-size: 2rem;
   border: none;
   color: #9d9b32;
 }
-.fas {
+.our-work-peices .fas {
   position: absolute;
 }
 .our-work-peices {
@@ -220,11 +227,11 @@ button {
 .work-peice img {
   border-radius: 5px;
 }
-.fa-chevron-left {
+.our-work-peices .fa-chevron-left {
   top: 34%;
   left: 28%;
 }
-.fa-chevron-right {
+.our-work-peices .fa-chevron-right {
   top: 34%;
   right: 28%;
 }
@@ -250,4 +257,176 @@ button {
 }
 .our-client {
   padding-bottom: 60px;
+}
+/* our team  */
+
+.our-team-header {
+  width: 40%;
+  margin: 0 auto 60px;
+}
+.our-team-header h2 {
+  font-size: 2.5rem;
+  color: #4f4c4c;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.team-list button {
+  background: none;
+  font-size: 2rem;
+  border: none;
+  color: #303142;
+}
+.team-list .fa-chevron-left {
+  top: 47%;
+  left: 30%;
+}
+.team-list .fa-chevron-right {
+  top: 47%;
+  right: 30%;
+}
+.team-list .fas {
+  position: absolute;
+}
+.gold2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #9d9b32;
+  font-weight: 600;
+}
+.our-team-para {
+  padding-top: 40px;
+}
+.our-team-para big {
+  font-weight: 600;
+}
+.our-team-para p {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  background-color: #cecdb4c7;
+  padding: 20px 15px;
+  color: #3f405a;
+  border-radius: 4px;
+}
+.team-cont {
+  background-color: #dad9be;
+}
+/* contact form  */
+.contact-form-header {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+.contact-form-header h2 {
+  font-size: 2.5rem;
+  color: #4f4c4c;
+  text-transform: uppercase;
+  text-align: center;
+}
+.contact-form-para {
+  text-align: center;
+  color: #4f4c4c;
+  margin-bottom: 60px;
+}
+.form-holder {
+  display: flex;
+  justify-content: space-around;
+}
+.form-left textarea {
+  resize: none;
+  width: 250px;
+  height: 60px;
+}
+.form-holder input:not(input[type="submit"]),
+.form-left textarea {
+  background-color: #f4f4f4;
+  border: #e5e5e5 1px solid;
+  outline: none;
+  padding: 5px 6px;
+  border-radius: 3px;
+}
+.form-holder input:not(input[type="submit"]):focus,
+.form-left textarea:focus {
+  outline: #929292 1px solid;
+  transition: all 1s ease;
+  border-radius: 3px;
+}
+.name,
+.email,
+.subject,
+.message {
+  display: flex;
+  flex-direction: column;
+  margin: 22px;
+  color: #949494;
+}
+.name label,
+.email label,
+.subject label,
+.message label {
+  font-size: 0.8rem;
+}
+.contact-right {
+  margin-block: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-right .upper p {
+  margin: 15px 0;
+  color: #6e6e6e;
+}
+.contact-right .lower p {
+  margin: 15px 0;
+  color: #6e6e6e;
+}
+.form-holder input[type="submit"] {
+  margin-top: 18px;
+  background-color: #e6e6d8;
+  color: #4f4c4c;
+  border: none;
+  outline: none;
+  padding: 6px 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  transition: all ease-in-out 0.4s;
+}
+.form-holder input[type="submit"]:hover {
+  background-color: #b1b08d;
+  color: #fff;
+}
+/* footer  */
+
+footer {
+  background-color: #686734;
+  height: 160px;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 30px 30px 0 0;
+}
+.right-side p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.right-side .brands {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.right-side .brands i {
+  font-size: 1.2rem;
 }
