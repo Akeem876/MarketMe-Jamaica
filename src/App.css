@@ -25,6 +25,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  width: 35%;
+  font-size: 0.8rem;
+}
+
 .services-nav {
   background-color: #b0af8f;
   height: 11vh;
@@ -48,14 +57,6 @@ body {
   background-color: #fff;
   margin: 0 auto;
 }
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  width: 35%;
-  font-size: 0.8rem;
-}
 .navigation ul li {
   transition: ease 0.4s all;
 }
@@ -69,6 +70,48 @@ body {
 .logo {
   display: flex;
   align-items: center;
+}
+.hamburger-cont {
+  height: 30px;
+  width: 30px;
+  margin: auto 0;
+  display: none;
+}
+.burger1,
+.burger2,
+.burger3 {
+  height: 1px;
+  background-color: #fff;
+  margin: 6px;
+  border-radius: 3px;
+}
+.burger1 {
+  width: 40%;
+}
+.burger2 {
+  width: 63%;
+}
+.burger3 {
+  width: 90%;
+}
+@media only screen and (max-width: 800px) {
+  .nav {
+    justify-content: space-around;
+  }
+  .navigation {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 666px) {
+  .hamburger-cont {
+    display: block;
+  }
+  .navigation {
+    display: none;
+  }
+  .nav {
+    justify-content: space-between;
+  }
 }
 /* main section home page */
 .main-first {

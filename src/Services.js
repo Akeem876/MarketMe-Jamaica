@@ -31,14 +31,14 @@ const Services = () => {
               <div className="underline"></div>
             </ul>
             <ul>
-              <a href="#work">
+              <Link to="/#work">
                 <li>Work</li>
-              </a>
+              </Link>
             </ul>
             <ul>
-              <a href="#contact">
+              <Link to="/#contact">
                 <li>Contact</li>
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
