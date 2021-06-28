@@ -17,13 +17,15 @@ const OurTeam = () => {
             </p>
           </div>
           <div className="team-list">
-            <img style={{ height: "250px" }} src={ourteams.images[0]} alt="" />
-            <button>
-              <i className="fas fa-chevron-left"></i>
-            </button>
-            <button>
-              <i className="fas fa-chevron-right"></i>
-            </button>
+            <div className="team">
+              <img src={ourteams.images[0]} alt="" />
+              <button>
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <button>
+                <i className="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>

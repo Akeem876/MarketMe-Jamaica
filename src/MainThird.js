@@ -24,18 +24,18 @@ const MainThird = () => {
             <div className="work-peice">
               <div className="peices">
                 <img
-                  style={{ height: "250px" }}
+                  // style={{ height: "250px" }}
                   src={ourWork.image[6]}
                   alt=""
                 />
               </div>
+              <button>
+                <i className="fas third-prev fa-chevron-left"></i>
+              </button>
+              <button>
+                <i className="fas third-next fa-chevron-right"></i>
+              </button>
             </div>
-            <button>
-              <i className="fas third-prev fa-chevron-left"></i>
-            </button>
-            <button>
-              <i className="fas third-next fa-chevron-right"></i>
-            </button>
           </article>
         </div>
       </article>
