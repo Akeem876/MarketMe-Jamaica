@@ -723,3 +723,16 @@ footer {
     display: none;
   }
 }
+.to-top-button {
+  position: fixed;
+  bottom: 50px;
+  right: 6%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.to-top-button .fas {
+  color: #a3a276;
+  font-size: 2rem;
+}

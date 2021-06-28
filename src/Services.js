@@ -7,7 +7,7 @@ import Footer from "./Footer";
 const Services = () => {
   return (
     <main>
-      <nav className="services-nav">
+      <nav className="services-nav" id="home">
         <div className="nav">
           <Link to="/">
             <div className="logo">
@@ -50,6 +50,13 @@ const Services = () => {
       </nav>
       <OurServices />
       <Footer />
+      <div className="to-top">
+        <a href="#home">
+          <button className="to-top-button">
+            <i className="fas fa-arrow-circle-up"></i>
+          </button>
+        </a>
+      </div>
     </main>
   );
 };
