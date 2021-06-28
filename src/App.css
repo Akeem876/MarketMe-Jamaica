@@ -736,3 +736,48 @@ footer {
   color: #a3a276;
   font-size: 2rem;
 }
+
+.modal-nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #382b2b;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.modal-nav ul > * {
+  text-decoration: none;
+  color: #fff;
+}
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px;
+}
+.close-btn i {
+  color: #fff;
+  font-size: 1.9rem;
+  transition: ease 0.4s all;
+}
+.close-btn i:hover {
+  color: #686734;
+}
+.nav-area {
+  width: 50%;
+  height: 50%;
+  margin: 122px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navi ul {
+  padding: 15px 10px;
+}
+.navi ul li {
+  text-align: center;
+  transition: ease 0.4s all;
+}
+.navi ul li:hover {
+  color: #b3b37d;
+}
