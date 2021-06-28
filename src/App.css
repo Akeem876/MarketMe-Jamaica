@@ -699,3 +699,27 @@ footer {
   background-color: #f4f4f4;
   flex-direction: row-reverse;
 }
+@media only screen and (max-width: 1000px) {
+  .our-services-main .services-text {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .our-services-main {
+    display: block;
+  }
+  .service-para {
+    display: block !important;
+  }
+  .service-para p {
+    width: 100% !important;
+    font-size: 0.7rem !important;
+  }
+  .services-text {
+    margin: auto;
+    padding-top: 12px;
+  }
+  .img-cont {
+    display: none;
+  }
+}

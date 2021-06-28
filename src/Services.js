@@ -41,6 +41,11 @@ const Services = () => {
               </Link>
             </ul>
           </div>
+          <div className="hamburger-cont">
+            <div className="burger1"></div>
+            <div className="burger2"></div>
+            <div className="burger3"></div>
+          </div>
         </div>
       </nav>
       <OurServices />
