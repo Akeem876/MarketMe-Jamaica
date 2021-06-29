@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import logo from "./MarketMe/images//market-me-logo.png";
 import { Link } from "react-router-dom";
 import OurServices from "./OurServices";
@@ -6,6 +7,23 @@ import Footer from "./Footer";
 
 const Services = () => {
   const [nav, isNav] = useState(false);
+  const [visibility, setVisibility] = useState(false);
+  const shows = 500;
+  const handleScroll = () => {
+    if (window.pageYOffset > shows) {
+      if (!visibility) setVisibility(true);
+    } else {
+      if (visibility) setVisibility(false);
+    }
+  };
+  useEffect(() => {
+    if (shows) {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [handleScroll]);
 
   return (
     <main>
@@ -93,13 +111,15 @@ const Services = () => {
       </nav>
       <OurServices />
       <Footer />
-      <div className="to-top">
-        <a href="#home">
-          <button className="to-top-button">
-            <i className="fas fa-arrow-circle-up"></i>
-          </button>
-        </a>
-      </div>
+      {visibility && (
+        <div className="to-top">
+          <a href="#home">
+            <button className="to-top-button">
+              <i className="fas fa-arrow-circle-up"></i>
+            </button>
+          </a>
+        </div>
+      )}
     </main>
   );
 };
