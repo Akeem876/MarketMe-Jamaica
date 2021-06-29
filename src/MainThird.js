@@ -1,9 +1,24 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import next from "./MarketMe/icons/chevron-right-solid.svg";
 import prev from "./MarketMe/icons/chevron-left-solid.svg";
 import { ourWork } from "./our-work";
 
 const MainThird = () => {
+  const [state, isState] = useState(0);
+  const handleNextBtn = () => {
+    isState(state + 1);
+    if (state === ourWork.length - 1) {
+      isState(0);
+    }
+  };
+  const handlePrevBtn = () => {
+    isState(state - 1);
+    if (state === 0) {
+      isState(ourWork.length - 1);
+    }
+  };
+  console.log(state);
   return (
     <section className="main-third">
       <article className="our-work" id="work">
@@ -23,16 +38,20 @@ const MainThird = () => {
           <article className="our-work-peices">
             <div className="work-peice">
               <div className="peices">
-                <img
-                  // style={{ height: "250px" }}
-                  src={ourWork.image[6]}
-                  alt=""
-                />
+                <img src={ourWork[state].image} alt={ourWork[state].title} />
               </div>
-              <button>
+              <button
+                onClick={() => {
+                  handlePrevBtn();
+                }}
+              >
                 <i className="fas third-prev fa-chevron-left"></i>
               </button>
-              <button>
+              <button
+                onClick={() => {
+                  handleNextBtn();
+                }}
+              >
                 <i className="fas third-next fa-chevron-right"></i>
               </button>
             </div>

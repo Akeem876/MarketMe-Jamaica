@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import marketMeAboutImage from "./MarketMe/images/about-marketme.jpg";
 
@@ -20,7 +21,7 @@ const MainSecond = () => {
             <img
               // style={{ height: "300px" }}
               src={marketMeAboutImage}
-              alt="Market-Me-About-Image"
+              alt="Market-Me-About"
             />
           </div>
         </article>
