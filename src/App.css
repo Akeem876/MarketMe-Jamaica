@@ -329,7 +329,7 @@ body {
   position: relative;
 }
 .work-peice img {
-  height: 250px;
+  width: 250px;
 }
 .work-peice,
 .work-peice img {
