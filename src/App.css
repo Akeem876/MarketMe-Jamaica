@@ -730,8 +730,18 @@ footer {
   background: none;
   border: none;
   outline: none;
+  transition: all ease 0.4s;
 }
-
+.open {
+  opacity: 1;
+  position: fixed;
+  bottom: 50px;
+  right: 6%;
+  background: none;
+  border: none;
+  outline: none;
+  transition: all ease 0.4s;
+}
 .to-top-button .fas {
   color: #a3a276;
   font-size: 2rem;
