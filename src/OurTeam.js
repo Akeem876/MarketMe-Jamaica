@@ -1,7 +1,26 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import { ourteams } from "./our-team";
 
 const OurTeam = () => {
+  const [state, isState] = useState(0);
+  const handleNextBtn = () => {
+    isState(state + 1);
+    if (state === ourteams.length - 1) {
+      isState(0);
+    }
+  };
+  const handlePrevBtn = () => {
+    isState(state - 1);
+    if (state === 0) {
+      isState(ourteams.length - 1);
+    }
+  };
+  const [modal, setModal] = useState(false);
+  const handleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <article className="our-team">
       <section className="our-team-holder">
@@ -18,17 +37,48 @@ const OurTeam = () => {
           </div>
           <div className="team-list">
             <div className="team">
-              <img src={ourteams.images[0]} alt="" />
-              <button>
+              <img
+                src={ourteams[state].images}
+                alt={ourteams[state].name}
+                onClick={() => {
+                  handleModal();
+                }}
+              />
+              <button
+                onClick={() => {
+                  handlePrevBtn();
+                }}
+              >
                 <i className="fas fa-chevron-left"></i>
               </button>
-              <button>
+              <button
+                onClick={() => {
+                  handleNextBtn();
+                }}
+              >
                 <i className="fas fa-chevron-right"></i>
               </button>
             </div>
           </div>
         </div>
       </section>
+      {modal && (
+        <div className="our-work-modal">
+          <div
+            className="close-btn home-page-modal"
+            onClick={() => {
+              setModal(false);
+            }}
+          >
+            <i className="far fa-window-close"></i>
+          </div>
+          <img src={ourteams[state].images} alt={ourteams[state].title} />
+          <div className="modal-text">
+            <h2>{ourteams[state].title}</h2>
+            <p>{ourteams[state].desc}</p>
+          </div>
+        </div>
+      )}
     </article>
   );
 };

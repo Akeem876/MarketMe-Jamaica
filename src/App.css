@@ -330,6 +330,7 @@ body {
 }
 .work-peice img {
   width: 250px;
+  cursor: pointer;
 }
 .work-peice,
 .work-peice img {
@@ -338,15 +339,57 @@ body {
 .our-work-peices .fa-chevron-left {
   top: 43%;
   left: -29px;
+  cursor: pointer;
 }
 .our-work-peices .fa-chevron-right {
   top: 43%;
   right: -29px;
+  cursor: pointer;
 }
 .our-work-peices .work-peice {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.home-page-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+.our-work-modal {
+  background-color: #382b2b;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.8;
+}
+.our-work-modal h2 {
+  width: 80%;
+  margin: auto;
+  font-size: 1rem;
+}
+.our-work-modal p {
+  width: 80%;
+  margin: auto;
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+.our-work-modal h2,
+.our-work-modal p {
+  color: #b3b3b3;
+  margin-top: 15px;
+}
+.our-work-modal img {
+  width: 40%;
+  border-radius: 5px;
 }
 @media only screen and (max-width: 670px) {
   .our-work-para {
@@ -363,7 +406,7 @@ body {
 }
 @media only screen and (max-width: 500px) {
   .work-peice img {
-    height: 180px;
+    width: 180px;
   }
 }
 
@@ -418,6 +461,7 @@ body {
 }
 .team-list img {
   height: 250px;
+  cursor: pointer;
 }
 .team {
   position: relative;
@@ -431,10 +475,12 @@ body {
 .team-list .fa-chevron-left {
   top: 44%;
   left: -30px;
+  cursor: pointer;
 }
 .team-list .fa-chevron-right {
   top: 44%;
   right: -30px;
+  cursor: pointer;
 }
 .team-list .fas {
   position: absolute;

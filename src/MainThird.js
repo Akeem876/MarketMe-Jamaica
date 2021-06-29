@@ -18,7 +18,12 @@ const MainThird = () => {
       isState(ourWork.length - 1);
     }
   };
-  console.log(state);
+  const [modal, setModal] = useState(false);
+  const handleModal = () => {
+    setModal(!modal);
+  };
+  console.log(modal);
+  // console.log(state);
   return (
     <section className="main-third">
       <article className="our-work" id="work">
@@ -38,7 +43,13 @@ const MainThird = () => {
           <article className="our-work-peices">
             <div className="work-peice">
               <div className="peices">
-                <img src={ourWork[state].image} alt={ourWork[state].title} />
+                <img
+                  src={ourWork[state].image}
+                  alt={ourWork[state].title}
+                  onClick={() => {
+                    handleModal();
+                  }}
+                />
               </div>
               <button
                 onClick={() => {
@@ -58,6 +69,23 @@ const MainThird = () => {
           </article>
         </div>
       </article>
+      {modal && (
+        <div className="our-work-modal">
+          <div
+            className="close-btn home-page-modal"
+            onClick={() => {
+              setModal(false);
+            }}
+          >
+            <i className="far fa-window-close"></i>
+          </div>
+          <img src={ourWork[state].image} alt={ourWork[state].title} />
+          <div className="modal-text">
+            <h2>{ourWork[state].title}</h2>
+            <p>{ourWork[state].desc}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
