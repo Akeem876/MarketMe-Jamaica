@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 import Nav from "./Nav";
 
@@ -28,13 +29,17 @@ const MainFirst = () => {
       <div className="overlay">
         <Nav />
         <div className="top-frame">
-          <div className="top-text">
-            <h2>Telling Stories</h2>
-          </div>
+          <Fade bottom>
+            <div className="top-text">
+              <h2>Telling Stories</h2>
+            </div>
+          </Fade>
           <div className="separator"></div>
-          <div className="bottom-text">
-            <h2>Building Brands</h2>
-          </div>
+          <Fade top>
+            <div className="bottom-text">
+              <h2>Building Brands</h2>
+            </div>
+          </Fade>
         </div>
       </div>
       {visibility && (
