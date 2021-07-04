@@ -1,6 +1,34 @@
-import React from "react";
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
+import * as yup from "yup";
+import { Formik, Form } from "formik";
+import TextFeild from "./TextFeild";
 
 const ContactForm = () => {
+  const [validate, setValidate] = useState({
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
+  const userSchema = yup.object().shape({
+    name: yup.string().required("required"),
+    subject: yup.string().required("required"),
+    email: yup.string().email("email is invalid").required("required"),
+    message: yup.string(),
+  });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let formData = {
+      name: e.target[0].value,
+      subject: e.target[1].value,
+      email: e.target[2].value,
+      message: e.target[3].value,
+    };
+    const isValid = await userSchema.isValid(formData);
+  };
+
   return (
     <article className="contact-form">
       <div className="contact-form-header" id="contact">
@@ -14,28 +42,36 @@ const ContactForm = () => {
       </div>
       <div className="form-holder">
         <div className="form-left">
-          <form>
-            <div className="name">
-              <label htmlFor="name">Name:</label>
-              <input type="text" placeholder="enter name" name="name" />
-            </div>
-            <div className="email">
-              <label htmlFor="email">Email:</label>
-              <input type="text" name="email" placeholder="enter email" />
-            </div>
-            <div className="subject">
-              <label htmlFor="subject">Subject:</label>
-              <input type="text" name="subject" placeholder="enter subject" />
-            </div>
-            <div className="message">
-              <label htmlFor="message">Message:</label>
-              <textarea
-                name="message"
-                placeholder="enter your message"
-              ></textarea>
-              <input type="submit" value="Send Email" />
-            </div>
-          </form>
+          <Formik
+            initialValues={{
+              name: "",
+              subject: "",
+              email: "",
+              message: "",
+            }}
+            validationSchema={userSchema}
+          >
+            {(formik) => (
+              <Form>
+                <TextFeild
+                  handleSubmit={handleSubmit}
+                  label="name"
+                  name="name"
+                  type="text"
+                />
+                <TextFeild label="email" name="email" type="text" />
+                <TextFeild label="subject" name="subject" type="text" />
+                <div className="message">
+                  <label htmlFor="message">Message:</label>
+                  <textarea
+                    name="message"
+                    placeholder="enter your message"
+                  ></textarea>
+                  <input type="submit" value="Send Email" />
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
         <div className="contact-right">
           <div className="upper">

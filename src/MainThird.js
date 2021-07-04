@@ -22,7 +22,6 @@ const MainThird = () => {
   const handleModal = () => {
     setModal(!modal);
   };
-  console.log(modal);
   // console.log(state);
   return (
     <section className="main-third">

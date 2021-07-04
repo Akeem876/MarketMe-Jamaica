@@ -558,6 +558,10 @@ body {
   padding: 5px 6px;
   border-radius: 3px;
 }
+.error-message {
+  color: rgb(179, 28, 28);
+  font-size: 0.8rem;
+}
 .form-holder input:not(input[type="submit"]):focus,
 .form-left textarea:focus {
   outline: #929292 1px solid;
